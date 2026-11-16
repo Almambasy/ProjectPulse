@@ -1,132 +1,99 @@
-## Development Progress — 15 November 2026
+# ProjectPulse
 
-### 1. Project Environment Setup
+### Intelligent Project Monitoring. Predictive Insights. Autonomous Action.
 
-The ProjectPulse development environment has been established.
+ProjectPulse is an intelligent project monitoring platform designed to help organisations understand project performance, monitor budgets, identify risks, and make better project decisions.
 
-**Tools and technologies configured:**
-- Microsoft Fabric
-- Microsoft Rayfin CLI v1.36.2
-- Node.js 24.22.3 managed through NVM for Windows
-- React 19
-- TypeScript
-- Vite 8
-- Git and GitHub
-- Visual Studio Code
+Our vision is to move project monitoring beyond static reports into an intelligent system that can detect problems, generate insights, predict potential issues, and support management actions.
 
-**GitHub repository:**  
-https://github.com/Almambasy/ProjectPulse
+## Product Vision
 
-### 2. Fabric App Initialization
+ProjectPulse aims to provide a unified intelligence layer for project management by combining project data, financial monitoring, data quality, predictive analytics, and AI-powered automation.
 
-Created the ProjectPulse application using the Rayfin `blankapp` template.
+The platform is being developed as an independent software product, with flexible integration capabilities for external systems such as ERP platforms and analytics services.
 
-- Initialized the Rayfin application inside the `app` directory.
-- Authenticated with Microsoft.
-- Created a new Microsoft Fabric workspace.
-- Created the Rayfin Fabric backend.
-- Configured the local development environment.
-- Started the application successfully.
+## Core Capabilities
 
-**Local development URL:**  
-http://localhost:5173/
+- **Project Monitoring:** Monitor project status, progress, milestones, and performance.
+- **Budget Intelligence:** Analyse approved budgets, project expenditure, budget utilisation, and potential overruns.
+- **Data Quality Intelligence:** Identify inconsistencies, missing information, duplicate records, and other data-quality issues.
+- **Risk Intelligence:** Identify and monitor project risks and exceptions.
+- **Predictive Insights:** Develop forecasting capabilities to identify potential project and financial problems.
+- **Agentic Automation:** Future capability to recommend and initiate controlled actions based on project intelligence.
 
-The application currently displays the default Rayfin starter dashboard. The ProjectPulse interface has not yet been implemented.
+## Architecture Direction
 
-### 3. Capability Packs Installed
+ProjectPulse is designed around an independent application and intelligence engine.
 
-Installed the following Rayfin capability packs:
+- **Frontend:** React, TypeScript and Vite.
+- **Application foundation:** Microsoft Rayfin.
+- **Intelligence engine:** Python.
+- **Initial data foundation:** CSV-based sample datasets.
+- **Future storage:** A structured database.
+- **Integration layer:** Planned APIs and external system connectors.
+- **AI and automation:** Planned agentic capabilities.
 
-| Capability pack | Purpose |
+Microsoft Fabric may be used as an optional integration and analytics platform. It is not a mandatory dependency for the core ProjectPulse intelligence engine.
+
+## Current Development Status
+
+ProjectPulse is under active development.
+
+| Component | Status |
 |---|---|
-| Data Modeling | Enables persistent application data and entity management |
-| Visuals | Provides charts, tables and data visualization components |
+| Project data foundation | Established |
+| Sample project datasets | Available |
+| Python data quality engine | Implemented |
+| Data quality findings and report | Generated |
+| React executive overview | Developed with illustrative sample data |
+| Budget intelligence engine | Next development phase |
+| Predictive intelligence | Planned |
+| API integration layer | Planned |
+| Agentic automation | Planned |
 
-These capabilities will support the ProjectPulse application.
+The dashboard currently contains illustrative sample records and figures. These should not be interpreted as live customer or production data.
 
-### 4. Project Data Model Development
+## Development Roadmap
 
-Created five business entities to support the application's core functionality.
+1. **Phase 1 – Data Foundation:** Establish project datasets, entities, and data structures.
+2. **Phase 2 – Data Quality Intelligence:** Build validation, anomaly detection, and data-quality reporting.
+3. **Phase 3 – Budget Intelligence:** Build budget calculations, utilisation monitoring, variance analysis, and forecasting foundations.
+4. **Phase 4 – Project Intelligence:** Develop milestone, progress, and risk intelligence.
+5. **Phase 5 – Predictive Intelligence:** Introduce forecasting and predictive project insights.
+6. **Phase 6 – Agentic Automation:** Develop intelligent agents, recommendations, and controlled workflows.
+7. **Phase 7 – Product Integration:** Connect the independent engine to the application dashboard and external systems.
 
-| Entity | Purpose |
-|---|---|
-| Project | Project information, manager, status, dates and progress |
-| ProjectBudget | Approved budget, actual expenditure and forecast expenditure |
-| Milestone | Project deliverables, deadlines and completion status |
-| ProjectRisk | Risk severity, likelihood, mitigation plans and status |
-| ProjectUpdate | Progress reports, accomplishments, blockers and next steps |
+## Repository Structure
 
-The original Rayfin `Item` starter entity remains registered.
-
-### 5. Data Model Implementation
-
-Completed the initial TypeScript entity definitions.
-
-- Added entity decorators.
-- Added owner-based access policies.
-- Defined project relationships for budget, milestone, risk and update records.
-- Added matching shared TypeScript record interfaces.
-- Registered the entities in `packages/data/src/index.ts`.
-- Updated `packages/shared/src/index.ts` with the corresponding contracts.
-
-### 6. Build and Validation Results
-
-The following checks have completed successfully:
-
-| Validation | Result |
-|---|---|
-| TypeScript typecheck | Passed |
-| Frontend production build | Passed |
-| Data package build | Passed |
-| Rayfin CLI initialization | Successful |
-| Local development server | Running successfully |
-
-Commands used:
-
-```powershell
-npm run typecheck
-
-npm run build
-
-npm run build --workspace @rayfin-app/data
+```text
+ProjectPulse/
+├── app/                  # React, TypeScript and Rayfin application
+├── data/
+│   ├── sample/           # Sample project datasets
+│   └── sample_backup/    # Dataset backups
+├── engine/               # Python intelligence engines
+├── reports/              # Generated intelligence reports
+├── scripts/              # Development and execution scripts
+├── docs/                 # Product documentation
+├── tests/                # Engine test suite
+└── README.md
 ```
 
-### 7. Current Application Status
+## Development Philosophy
 
-**Completed:**
-- Development environment setup
-- Rayfin application initialization
-- Fabric backend and workspace creation
-- Data modeling and visuals capability packs
-- Five ProjectPulse business entity definitions
-- Shared TypeScript contracts
-- Entity registration
-- Initial compilation and validation
+ProjectPulse is being developed around five principles:
 
-**Not yet completed:**
-- Applying the database schema to the Fabric backend
-- Creating sample project records
-- Connecting frontend screens to persistent data
-- Replacing the default Rayfin dashboard
-- Building the Executive Command Centre
-- Implementing budget, milestone and risk dashboards
-- Integrating AI-generated project insights
-- Security testing and deployment
+- Independent core intelligence.
+- Reliable and explainable calculations.
+- Flexible integration with business systems.
+- Human oversight for consequential actions.
+- A scalable foundation for AI-powered project management.
 
-### 8. Next Development Activities
+## Project
 
-The next development session will focus on:
+**Project:** ProjectPulse  
+**Category:** Project Intelligence and Automation  
+**Development:** Active  
+**Repository:** https://github.com/Almambasy/ProjectPulse
 
-1. Review Rayfin deployment instructions.
-2. Apply the completed data schema to the Fabric backend.
-3. Verify that the entities are available through the application data service.
-4. Implement project creation, editing and viewing.
-5. Replace the starter dashboard with the ProjectPulse Executive Command Centre.
-
-### 9. Development Principle
-
-ProjectPulse is being developed as a functional project-monitoring application, not just a static dashboard.
-
-The application will eventually support persistent project records, budget tracking, milestone monitoring, risk management, management reporting and AI-assisted insights.
-
-Initial records will use clearly labelled sample data. Business Central integration will be introduced in a later development phase.
+*Intelligent Project Monitoring. Predictive Insights. Autonomous Action.*
