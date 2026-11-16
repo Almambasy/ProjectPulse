@@ -90,6 +90,30 @@ export interface ProjectUpdateRecord {
   owner_id: string;
 }
 
+export interface ProjectTransactionRecord {
+  id: string;
+  project_id: string;
+  project: ProjectRecord;
+  description: string;
+  category:
+    | 'materials'
+    | 'labour'
+    | 'equipment'
+    | 'transport'
+    | 'accommodation'
+    | 'services'
+    | 'other';
+  amount: number;
+  currency: string;
+  transactionDate: Date;
+  reference?: string;
+  supplier?: string;
+  status: 'pending' | 'approved' | 'paid' | 'cancelled';
+  createdAt: Date;
+  updatedAt: Date;
+  owner_id: string;
+}
+
 export type UniversalAppSchema = {
   Item: ItemRecord;
   Project: ProjectRecord;
@@ -97,5 +121,5 @@ export type UniversalAppSchema = {
   Milestone: MilestoneRecord;
   ProjectRisk: ProjectRiskRecord;
   ProjectUpdate: ProjectUpdateRecord;
+  ProjectTransaction: ProjectTransactionRecord;
 };
-

@@ -7,12 +7,14 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+
 import { Item } from './Item.js';
 import { Project } from './Project.js';
 import { ProjectBudget } from './ProjectBudget.js';
 import { Milestone } from './Milestone.js';
 import { ProjectRisk } from './ProjectRisk.js';
 import { ProjectUpdate } from './ProjectUpdate.js';
+import { ProjectTransaction } from './ProjectTransaction.js';
 
 import type { UniversalAppSchema } from '@rayfin-app/shared';
 
@@ -28,6 +30,7 @@ export {
   Milestone,
   ProjectRisk,
   ProjectUpdate,
+  ProjectTransaction,
 };
 
 export const schema = [
@@ -37,4 +40,5 @@ export const schema = [
   Milestone,
   ProjectRisk,
   ProjectUpdate,
+  ProjectTransaction,
 ];
